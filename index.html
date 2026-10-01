@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhairya Desai — Data Science Portfolio</title>
+  <meta name="description" content="Portfolio of Dhairya Desai, B.Tech Data Science student at NMIMS Mumbai.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body class="loading">
+
+  <!-- SVG Filters for Unique Distortions -->
+  <svg style="width:0;height:0;position:absolute;z-index:-1;" aria-hidden="true" focusable="false">
+    <defs>
+      <!-- Gooey effect for nav -->
+      <filter id="gooey">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+        <feBlend in="SourceGraphic" in2="goo" />
+      </filter>
+      <!-- Liquid Distortion for Cursor -->
+      <filter id="liquid-distortion">
+        <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="30" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <div class="global-noise"></div>
+
+  <!-- Distorting Liquid Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-glass"></div>
+
+  <!-- Gooey Navigation -->
+  <nav class="nav">
+    <a class="mark scramble" href="#top" data-text="D.D.">D.D.</a>
+    <div class="nav-links">
+      <div class="nav-blob"></div>
+      <a href="#about" class="nav-item">About</a>
+      <a href="#projects" class="nav-item">Projects</a>
+      <a href="#skills" class="nav-item">Skills</a>
+      <a href="#interests" class="nav-item">Beyond</a>
+      <a href="#contact" class="nav-item">Contact</a>
+    </div>
+    <button class="mobile-toggle">Menu</button>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="#about" class="scramble" data-text="About">About</a>
+    <a href="#projects" class="scramble" data-text="Projects">Projects</a>
+    <a href="#skills" class="scramble" data-text="Skills">Skills</a>
+    <a href="#interests" class="scramble" data-text="Beyond">Beyond</a>
+    <a href="#contact" class="scramble" data-text="Contact">Contact</a>
+  </div>
+
+  <!-- Masked Typography Hero -->
+  <header class="hero" id="top">
+    <div class="hero-bg-text">DATA<br>SCIENCE</div>
+    <div class="hero-content">
+      <div class="kicker scramble" data-text="portfolio · data science · mumbai">portfolio · data science · mumbai</div>
+      
+      <!-- Split outline/filled text -->
+      <div class="title-container">
+        <h1 class="main-title outline-text">
+          <span class="line">DHAIRYA</span>
+          <span class="line accent">DESAI</span>
+        </h1>
+        <h1 class="main-title filled-text clip-mask">
+          <span class="line">DHAIRYA</span>
+          <span class="line accent">DESAI</span>
+        </h1>
+      </div>
+
+      <p class="intro">B.Tech Data Science student focused on statistical modelling, regression and time series forecasting. Outside of coursework: guitar and powerlifting.</p>
+      
+      <div class="hero-ctas">
+        <a href="#projects" class="btn">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Let's Connect</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Flashlight About Section -->
+  <section class="about section-padding" id="about">
+    <div class="about-flashlight-layer"></div>
+    <div class="container relative-z">
+      <h2 class="section-title scramble" data-text="ABOUT // warm-up">ABOUT <span class="dim">// warm-up</span></h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="big-text">I work with data, and most of what I know I learned by getting a model wrong first.</p>
+          <div class="about-desc">
+            <p>I'm in my second year at SVKM's NMIMS, Mumbai, graduating in 2028. The course covers statistics and inference, signal and image processing, machine learning and database design. I'd rather build something that runs than read about it twice.</p>
+            <p>I like working through problems methodically, and classmates often ask me for help when they're stuck on an assignment. I focus on clear methodology and honest evaluation rather than overselling results.</p>
+          </div>
+        </div>
+        <div class="about-keywords-rotator">
+          <div class="rotating-word" style="--i:0">PYTHON</div>
+          <div class="rotating-word" style="--i:1">SQL</div>
+          <div class="rotating-word" style="--i:2">MACHINE LEARNING</div>
+          <div class="rotating-word" style="--i:3">STATISTICS</div>
+          <div class="rotating-word" style="--i:4">VISUALIZATION</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky Stacking Projects -->
+  <section class="projects section-padding" id="projects">
+    <div class="container">
+      <h2 class="section-title scramble" data-text="PROJECTS // the setlist">PROJECTS <span class="dim">// the setlist</span></h2>
+      
+      <div class="project-stack">
+        <!-- Project 1 -->
+        <div class="sticky-panel" id="panel-1">
+          <div class="project-panel">
+            <div class="project-content">
+              <span class="project-num">01</span>
+              <h3 class="project-title scramble" data-text="Zorix">Zorix</h3>
+              <p class="project-desc">A trading-signal web app. It reads market data and suggests buy or sell indications to support a decision, not make it.</p>
+              <div class="project-tags"><span>Python</span><span>Streamlit</span></div>
+            </div>
+            <div class="project-visual">
+              <canvas class="viz-canvas" data-type="market"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="sticky-panel" id="panel-2">
+          <div class="project-panel">
+            <div class="project-content">
+              <span class="project-num">02</span>
+              <h3 class="project-title scramble" data-text="TCS Stock Forecasting">TCS Stock Forecasting</h3>
+              <p class="project-desc">Pulled TCS price history with yfinance, tested for stationarity, differenced it, and fitted an ARIMA model.</p>
+              <div class="project-tags"><span>Python</span><span>statsmodels</span></div>
+            </div>
+            <div class="project-visual">
+              <canvas class="viz-canvas" data-type="chart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="sticky-panel" id="panel-3">
+          <div class="project-panel">
+            <div class="project-content">
+              <span class="project-num">03</span>
+              <h3 class="project-title scramble" data-text="Regression Pipeline">Regression Pipeline</h3>
+              <p class="project-desc">Scaling, VIF-based feature selection and pairplot diagnostics, then Ridge against Lasso, judged on R² and MSE.</p>
+              <div class="project-tags"><span>Python</span><span>scikit-learn</span></div>
+            </div>
+            <div class="project-visual">
+              <canvas class="viz-canvas" data-type="scatter"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="projects-footer">
+        <a class="link-arrow" href="https://github.com/dhairya27805" target="_blank" rel="noopener">All repositories on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee Skills -->
+  <section class="skills" id="skills">
+    <div class="marquee-container">
+      <div class="marquee-content">
+        <span>PYTHON</span><span class="dot">•</span>
+        <span>SQL</span><span class="dot">•</span>
+        <span>PANDAS</span><span class="dot">•</span>
+        <span>SCIKIT-LEARN</span><span class="dot">•</span>
+        <span>STATSMODELS</span><span class="dot">•</span>
+        <span>ARIMA</span><span class="dot">•</span>
+        <span>STREAMLIT</span><span class="dot">•</span>
+      </div>
+      <div class="marquee-content">
+        <span>PYTHON</span><span class="dot">•</span>
+        <span>SQL</span><span class="dot">•</span>
+        <span>PANDAS</span><span class="dot">•</span>
+        <span>SCIKIT-LEARN</span><span class="dot">•</span>
+        <span>STATSMODELS</span><span class="dot">•</span>
+        <span>ARIMA</span><span class="dot">•</span>
+        <span>STREAMLIT</span><span class="dot">•</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interests -->
+  <section class="interests section-padding" id="interests">
+    <div class="container">
+      <h2 class="section-title scramble" data-text="BEYOND THE CODE">BEYOND THE CODE</h2>
+      
+      <div class="interest-split">
+        <div class="interest-row">
+          <div class="split-text">
+            <h3 class="scramble" data-text="Guitar">Guitar</h3>
+            <p>Working out a song by ear feels a lot like finding a pattern in a dataset.</p>
+          </div>
+          <div class="split-img">
+            <div class="realistic-img guitar-img"></div>
+            <!-- Canvas overlay for liquid effect -->
+            <canvas class="liquid-overlay"></canvas>
+          </div>
+        </div>
+        
+        <div class="interest-row reverse">
+          <div class="split-text">
+            <h3 class="scramble" data-text="Powerlifting">Powerlifting</h3>
+            <p>Progress is a slow time series. You only see the trend if you keep logging.</p>
+          </div>
+          <div class="split-img">
+            <div class="realistic-img powerlifting-img"></div>
+            <canvas class="liquid-overlay"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact section-padding" id="contact">
+    <div class="container">
+      <h2 class="section-title scramble" data-text="CONTACT // next set">CONTACT <span class="dim">// next set</span></h2>
+      <div class="contact-content">
+        <p>Open to internships, analyst roles and project ideas. Email is the quickest way to reach me.</p>
+        <div>
+          <a class="mail" href="mailto:ddhairyadesai@gmail.com">ddhairyadesai@gmail.com</a>
+        </div>
+        <div class="others">
+          <button id="copy" type="button" class="btn btn-outline">Copy Email</button>
+          <a href="https://www.linkedin.com/in/dhairya-desai-7a50421b4/" target="_blank" rel="noopener" class="link-arrow">LinkedIn</a>
+          <a href="https://github.com/dhairya27805" target="_blank" rel="noopener" class="link-arrow">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Dhairya Desai. Crafted with purpose.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
